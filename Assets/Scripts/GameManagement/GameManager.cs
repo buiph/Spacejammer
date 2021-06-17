@@ -172,7 +172,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = settingsData.gameSpeed;
 
         // Set cursor
-        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
         _countingDown = true;
@@ -231,7 +230,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
 
         // Set cursor
-        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         _replayPanel.SetActive(true);
@@ -259,7 +257,6 @@ public class GameManager : MonoBehaviour
         if (!paused)
         {
             // Set cursor
-            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
             pausePanel.gameObject.SetActive(true);
@@ -269,7 +266,6 @@ public class GameManager : MonoBehaviour
         else
         {
             // Set cursor
-            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
             pausePanel.gameObject.SetActive(false);
